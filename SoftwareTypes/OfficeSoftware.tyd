@@ -98,7 +98,7 @@ SoftwareType
 					Level		1
 					CodeArt		1
 					Submarkets	[ 2; 2; 3 ]
-					SoftwareCategories [Calclator]
+					SoftwareCategories [Calculator]
 					}
 					{
 					Name		"Buttons"
@@ -107,7 +107,7 @@ SoftwareType
 					Level		1
 					CodeArt		1
 					Submarkets	[ 2; 2; 3 ]
-					SoftwareCategories [Calclator]
+					SoftwareCategories [Calculator]
 					}
 					{
 					Name		"Auto page layout"
@@ -187,7 +187,7 @@ SoftwareType
 					Level		2
 					CodeArt		1
 					Submarkets	[ 0; 1; 0 ]
-					SoftwareCategories [Calclator]
+					SoftwareCategories [Calculator]
 					}
 					{
 					Name		"Geometric maths library"
@@ -195,7 +195,7 @@ SoftwareType
 					Level		1
 					CodeArt		1
 					Submarkets	[ 0; 1; 0 ]
-					SoftwareCategories [Calclator]
+					SoftwareCategories [Calculator]
 					}
 					{
 					Name		"Spellcheck"
