@@ -92,6 +92,24 @@ SoftwareType
 			Features
 				[
 					{
+					Name		"Equation rendering"
+					Description "y=(1/(σ·sqrt(2·π)))e^(-(x-μ)^2/(2·σ^2))... Doesn't look good, does it?"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 3 ]
+					SoftwareCategories [Calclator]
+					}
+					{
+					Name		"Buttons"
+					Description "Have onscreen buttons to press rather than using the keyboard"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 3 ]
+					SoftwareCategories [Calclator]
+					}
+					{
 					Name		"Auto page layout"
 					Description "I.e. spending 30 minutes trying to make the picture fit in the place"
 					DevTime		3
@@ -163,6 +181,22 @@ SoftwareType
 			Submarkets	[ 1; 1; 1 ]
 			Features
 				[
+					{
+					Name		"Financial maths library"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 1; 0 ]
+					SoftwareCategories [Calclator]
+					}
+					{
+					Name		"Geometric maths library"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 0; 1; 0 ]
+					SoftwareCategories [Calclator]
+					}
 					{
 					Name		"Spellcheck"
 					Description "Make anyone seem even more competent"
@@ -271,49 +305,6 @@ SoftwareType
 					Submarkets	[ 0; 0; 1 ]
 					}
 				]
-			}
-			{
-			Name			Calclator
-			Spec			System
-			Description 	"You need to be able to input your calculations."
-			DevTime			5
-			CodeArt			0.75
-			SoftwareCategories [Calclator]
-			Dependencies	"2D Editor"
-			Submarkets		[ 1; 1; 1 ]
-			Features
-				[
-					{
-					Name		"Equation rendering"
-					Description "y=(1/(σ·sqrt(2·π)))e^(-(x-μ)^2/(2·σ^2))... Doesn't look good, does it?"
-					DevTime		3
-					Level		1
-					CodeArt		1
-					Submarkets	[ 2; 2; 3 ]
-					}
-					{
-					Name		"Buttons"
-					Description "Have onscreen buttons to press rather than using the keyboard"
-					DevTime		3
-					Level		1
-					CodeArt		1
-					Submarkets	[ 2; 2; 3 ]
-					}
-					{
-					Name		"Financial maths library"
-					DevTime		4
-					Level		2
-					CodeArt		1
-					Submarkets	[ 0; 1; 0 ]
-					}
-					{
-					Name		"Geometric maths library"
-					DevTime		2
-					Level		1
-					CodeArt		1
-					Submarkets	[ 0; 1; 0 ]
-					}
-				]
-			}
+			}			
 		]
 	}
