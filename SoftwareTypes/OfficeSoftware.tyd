@@ -3,12 +3,78 @@ SoftwareType
 	Name			"Office Software"
 	Category		Productivity
 	Description		"For all your officing needs"
+	Override        True
+	Categories
+		[
+			{
+			Name			Document
+			Description		"Display and edit text with this handy program."
+			Popularity		0.6
+			Retention		18
+			TimeScale		1
+			Iterative		0.8
+			NameGenerator	GameRPG
+			Submarkets		[ 1; 2; 4 ]
+			}
+			{
+			Name			Presentation
+			Description		"Sometimes used in meetings!"
+			Popularity		0.6
+			Retention		18
+			TimeScale		1
+			Iterative		0.8
+			NameGenerator	GameAdventure
+			Submarkets		[ 2; 4; 4 ]
+			}
+			{
+			Name			Spreadsheet
+			Description		"Make charts and stuff..."
+			Popularity		0.4
+			Retention		18
+			TimeScale		1
+			Iterative		0.7
+			NameGenerator	GameSimulation
+			Submarkets		[ 3; 1; 0 ]
+			}
+			{
+			Name			Calculator
+			Description		"A reliable mathematics tool."
+			Popularity		0.7
+			Retention		24
+			TimeScale		0.75
+			Iterative		0.95
+			NameGenerator	GameSport
+			Submarkets		[ 1; 0; 0 ]
+			}
+			{
+			Name			Email Client
+			Description		"Send and recieve electronic mail."
+			Popularity		0.6
+			Retention		24
+			TimeScale		1
+			Iterative		0.95
+			Unlock          1990
+			NameGenerator	GameRTS
+			Submarkets		[ 4; 1; 2 ]
+			}
+			{
+			Name			Database
+			Description		"Your users can use this to store their client's and employee's information."
+			Popularity		0.75
+			Retention		36
+			TimeScale		1
+			Iterative		0.95
+			Unlock          1990
+			NameGenerator	GameFPS
+			Submarkets		[ 3; 4; 1 ]
+			}
+		]
 	Random			0.2
 	Popularity		0.7
 	Retention		12
 	IdealPrice		100
 	OptimalDevTime	35
-	SubmarketNames	[ "Word processing"; "Spreadsheets"; "Presentation" ]
+	SubmarketNames	[ "Word processing"; "Data manipulation"; "User Interface" ]
 	Iterative		1
 	NameGenerator	Office
 	OSSupport		Computer
@@ -22,17 +88,10 @@ SoftwareType
 			DevTime			5
 			CodeArt			0.75
 			Dependencies	"2D Editor"
+			SoftwareCategories [Document; Spreadsheet; Presentation]
 			Submarkets		[ 1; 1; 1 ]
 			Features
 				[
-					{
-					Name		"Equation rendering"
-					Description "y=(1/(σ·sqrt(2·π)))e^(-(x-μ)^2/(2·σ^2))... Doesn't look good, does it?"
-					DevTime		3
-					Level		2
-					CodeArt		1
-					Submarkets	[ 2; 1; 1 ]
-					}
 					{
 					Name		"Auto page layout"
 					Description "I.e. spending 30 minutes trying to make the picture fit in the place"
@@ -85,16 +144,7 @@ SoftwareType
 					Level		3
 					CodeArt		0
 					Submarkets	0
-					Script_EndOfDay
-"var supportWork = PlayerCompany.WorkItems.FindFirst(x is SupportWork && x.TargetProduct == Product);//Find support work for product
-if (supportWork != null)
-	{
-	var remove = Floor(supportWork.Tickets.Count * 0.25 / DaysPerMonth);//Calculate the amount of support tickets to remove
-	if (remove > 0)
-		{
-		supportWork.Tickets.RemoveRange(0, remove);//Remove tickets in FIFO fashion
-		}
-	}"
+					Script_EndOfDay "/Scripts/bugReports.txt"
 					}
 				]
 			}
@@ -122,6 +172,7 @@ if (supportWork != null)
 					DevTime		2
 					Level		1
 					CodeArt		1
+					SoftwareCategories [Presentation]
 					Submarkets	[ 0; 0; 1 ]
 					}
 					{
@@ -141,22 +192,7 @@ if (supportWork != null)
 					Submarkets	[ 1; 0; 0 ]
 					}
 					{
-					Name		"Financial math library"
-					DevTime		4
-					Level		2
-					CodeArt		1
-					Submarkets	[ 0; 1; 0 ]
-					}
-					{
-					Name		"Geometric math library"
-					DevTime		2
-					Level		1
-					CodeArt		1
-					Submarkets	[ 0; 1; 0 ]
-					}
-					{
 					Name		"Date manipulation"
-					Description "What is today minus 10. June 2014? You're looking at it"
 					DevTime		2
 					Level		1
 					CodeArt		1
@@ -164,6 +200,7 @@ if (supportWork != null)
 					}
 					{
 					Name		"Scripting"
+					Description "Sometimes your users want to add their own features."
 					DevTime		6
 					Level		2
 					CodeArt		1
@@ -183,6 +220,7 @@ if (supportWork != null)
 				[
 					{
 					Name		"Cloud backup"
+					Description "Upload your user's work to the cloud allowing them to access it anywhere with internet."
 					Server		0.001
 					DevTime		5
 					Level		2
@@ -196,6 +234,16 @@ if (supportWork != null)
 					CodeArt		1
 					Submarkets	[ 0; 1; 0 ]
 					}
+					{
+					Name		"Email encryption"
+					Description "Make your clients feel like no one other than the intended recipient will recieve the emails. But I guess a backdoor can be built in, right?"
+					DevTime		2
+					Level		3
+					CodeArt		1
+					SoftwareCategories [Email Client]
+					Submarkets	0
+					Script_EndOfDay "/Scripts/sellUserEmails.txt"
+					}
 				]
 			}
 			{
@@ -205,6 +253,7 @@ if (supportWork != null)
 			Dependencies	"Audio Tool"
 			DevTime			2
 			CodeArt			1
+			SoftwareCategories [Presentation]
 			Submarkets		[ 0; 0; 1 ]
 			Features
 				[
@@ -215,6 +264,49 @@ if (supportWork != null)
 					Level		1
 					CodeArt		0
 					Submarkets	[ 0; 0; 1 ]
+					}
+				]
+			}
+			{
+			Name			Calclator
+			Spec			System
+			Description 	"You need to be able to input your calculations."
+			DevTime			5
+			CodeArt			0.75
+			SoftwareCategories [Calclator]
+			Dependencies	"2D Editor"
+			Submarkets		[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Equation rendering"
+					Description "y=(1/(σ·sqrt(2·π)))e^(-(x-μ)^2/(2·σ^2))... Doesn't look good, does it?"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 3 ]
+					}
+					{
+					Name		"Buttons"
+					Description "Have onscreen buttons to press rather than using the keyboard"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 3 ]
+					}
+					{
+					Name		"Financial maths library"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 1; 0 ]
+					}
+					{
+					Name		"Geometric maths library"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 0; 1; 0 ]
 					}
 				]
 			}

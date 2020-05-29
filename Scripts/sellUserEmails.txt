@@ -1,0 +1,6 @@
+if(Random() * Product.Userbase > 100000 * Product.Category.Popularity){
+    LaunchLawsuit("SpyingOnUsers", Product.Sum, 1);
+	Product.DevCompany.AddFans(-Product.Userbase, Product.Category);
+	Product.Userbase = Product.Userbase * 0.10; // Remove 90% of the fan base
+	Product.KillAwareness(); //Kill all press awareness
+}
