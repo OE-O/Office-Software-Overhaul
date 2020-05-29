@@ -4,6 +4,7 @@ SoftwareType
 	Category		Productivity
 	Description		"For all your officing needs"
 	Override        True
+	NameGenerator	Office
 	Categories
 		[
 			{
@@ -13,7 +14,6 @@ SoftwareType
 			Retention		18
 			TimeScale		1
 			Iterative		0.8
-			NameGenerator	GameRPG
 			Submarkets		[ 1; 2; 4 ]
 			}
 			{
@@ -23,7 +23,6 @@ SoftwareType
 			Retention		18
 			TimeScale		1
 			Iterative		0.8
-			NameGenerator	GameAdventure
 			Submarkets		[ 2; 4; 4 ]
 			}
 			{
@@ -33,7 +32,6 @@ SoftwareType
 			Retention		18
 			TimeScale		1
 			Iterative		0.7
-			NameGenerator	GameSimulation
 			Submarkets		[ 3; 1; 0 ]
 			}
 			{
@@ -43,7 +41,6 @@ SoftwareType
 			Retention		24
 			TimeScale		0.75
 			Iterative		0.95
-			NameGenerator	GameSport
 			Submarkets		[ 1; 0; 0 ]
 			}
 			{
@@ -54,7 +51,6 @@ SoftwareType
 			TimeScale		1
 			Iterative		0.95
 			Unlock          1990
-			NameGenerator	GameRTS
 			Submarkets		[ 4; 1; 2 ]
 			}
 			{
@@ -65,7 +61,6 @@ SoftwareType
 			TimeScale		1
 			Iterative		0.95
 			Unlock          1990
-			NameGenerator	GameFPS
 			Submarkets		[ 3; 4; 1 ]
 			}
 		]
