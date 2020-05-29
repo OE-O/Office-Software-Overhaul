@@ -88,7 +88,6 @@ SoftwareType
 			DevTime			5
 			CodeArt			0.75
 			Dependencies	"2D Editor"
-			SoftwareCategories [Document; Spreadsheet; Presentation]
 			Submarkets		[ 1; 1; 1 ]
 			Features
 				[
@@ -99,6 +98,7 @@ SoftwareType
 					Level		1
 					CodeArt		0.5
 					Submarkets	[ 1; 0; 0 ]
+					SoftwareCategories [Document; Spreadsheet; Presentation]
 					}
 					{
 					Name		"Charts and graphs"
@@ -106,6 +106,7 @@ SoftwareType
 					Level		2
 					CodeArt		0.5
 					Submarkets	[ 1; 4; 1 ]
+					SoftwareCategories [Document; Spreadsheet; Presentation]
 					}
 					{
 					Name		"Clipart"
@@ -114,6 +115,7 @@ SoftwareType
 					Level		1
 					CodeArt		0
 					Submarkets	[ 1; 0; 3 ]
+					SoftwareCategories [Document; Spreadsheet; Presentation]
 					}
 					{
 					Name		"Animations"
@@ -122,6 +124,7 @@ SoftwareType
 					Level		1
 					CodeArt		0.8
 					Submarkets	[ 0; 0; 1 ]
+					SoftwareCategories [Document; Spreadsheet; Presentation]
 					}
 					{
 					Name		"Slide templates"
@@ -129,6 +132,7 @@ SoftwareType
 					Level		1
 					CodeArt		0
 					Submarkets	[ 0; 0; 1 ]
+					SoftwareCategories [Document; Spreadsheet; Presentation]
 					}
 					{
 					Name		"Vector graphics"
@@ -136,6 +140,7 @@ SoftwareType
 					Level		2
 					CodeArt		1
 					Submarkets	[ 1; 0; 3 ]
+					SoftwareCategories [Document; Spreadsheet; Presentation]
 					}
 					{
 					Name		"Virtual assistant"
